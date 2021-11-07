@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--TownVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TownVC" id="Y6W-OH-hqX" customClass="TownVC" customModule="CarrotMarket_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0CN-Tt-1n0"/>
+                        <viewControllerLayoutGuide type="bottom" id="LsX-5K-7yx"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BlF-7f-8WL" customClass="CustomNavigationBar" customModule="CarrotMarket_CloneCoding" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="40" width="414" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="wS4-oi-fij"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BlF-7f-8WL" secondAttribute="trailing" id="1Cy-uk-9AY"/>
+                            <constraint firstItem="BlF-7f-8WL" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="40" id="Rsy-q1-QrZ"/>
+                            <constraint firstItem="BlF-7f-8WL" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="q5K-yW-yUG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7BK-uZ-t2j"/>
+                    <connections>
+                        <outlet property="customNavigationBar" destination="BlF-7f-8WL" id="2MA-DZ-xPj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,10 +46,9 @@
         <!--TownNVC-->
         <scene sceneID="x6a-DD-JQk">
             <objects>
-                <navigationController storyboardIdentifier="TownNVC" automaticallyAdjustsScrollViewInsets="NO" id="IxR-ht-K5Q" customClass="TownNVC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TownNVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="IxR-ht-K5Q" customClass="TownNVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lNt-Gb-I84">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
