@@ -67,12 +67,16 @@
         <!--HomeNVC-->
         <scene sceneID="xNy-bg-hiH">
             <objects>
-                <navigationController storyboardIdentifier="HomeNVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="FXF-t8-98c" customClass="HomeNVC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNVC" automaticallyAdjustsScrollViewInsets="NO" id="FXF-t8-98c" customClass="HomeNVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7D3-cm-WCC">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4iC-cV-F2z">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="acy-BN-hKI"/>
                     </connections>

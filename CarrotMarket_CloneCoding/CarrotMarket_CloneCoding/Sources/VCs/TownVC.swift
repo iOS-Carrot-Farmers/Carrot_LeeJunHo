@@ -16,7 +16,10 @@ class TownVC: UIViewController {
         super.viewDidLoad()
 
         customNavigationBar.delegate = self
+        SetNavigationBar()
     }
     
-
+    func SetNavigationBar() {
+        navigationController?.setNavigationBarHidden(true, animated:true)
+    }
 }

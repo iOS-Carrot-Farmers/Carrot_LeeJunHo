@@ -46,9 +46,10 @@
         <!--TownNVC-->
         <scene sceneID="x6a-DD-JQk">
             <objects>
-                <navigationController storyboardIdentifier="TownNVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="IxR-ht-K5Q" customClass="TownNVC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TownNVC" automaticallyAdjustsScrollViewInsets="NO" id="IxR-ht-K5Q" customClass="TownNVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lNt-Gb-I84">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
