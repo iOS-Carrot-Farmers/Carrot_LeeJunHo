@@ -34,8 +34,9 @@ class TabBarController: UITabBarController {
         let myCarrotSB = UIStoryboard.init(name: "MyCarrotSB", bundle:nil)
         let myCarrotNVC = myCarrotSB.instantiateViewController(identifier: "MyCarrotNVC")
         
-        tabBar.backgroundColor = .white
-        tabBar.isTranslucent = false
+        self.tabBar.backgroundColor = .white
+        self.tabBar.barTintColor = .black
+        self.tabBar.isTranslucent = false
       
         //MARK: - tabBarItem data
         

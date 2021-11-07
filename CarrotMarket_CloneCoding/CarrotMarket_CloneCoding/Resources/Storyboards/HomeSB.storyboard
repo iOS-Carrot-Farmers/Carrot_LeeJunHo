@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,25 +16,38 @@
                         <viewControllerLayoutGuide type="bottom" id="sln-21-Osk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fzC-A0-LKH">
-                                <rect key="frame" x="91" y="198" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpb-59-s9P" customClass="CustomNavigationBar" customModule="CarrotMarket_CloneCoding" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="40" width="414" height="48"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="48"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="da8-uM-1ES"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fzC-A0-LKH">
+                                <rect key="frame" x="0.0" y="88" width="375" height="644"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="diR-w5-FOJ" customClass="ItemTVC" customModule="CarrotMarket_CloneCoding" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="diR-w5-FOJ" id="s4Z-XD-CXS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fzC-A0-LKH" secondAttribute="trailing" id="IWs-R7-cQo"/>
                             <constraint firstAttribute="trailing" secondItem="Vpb-59-s9P" secondAttribute="trailing" id="Omd-tZ-uFr"/>
+                            <constraint firstItem="fzC-A0-LKH" firstAttribute="top" secondItem="Vpb-59-s9P" secondAttribute="bottom" id="YKo-sO-LVJ"/>
+                            <constraint firstAttribute="bottom" secondItem="fzC-A0-LKH" secondAttribute="bottom" constant="80" id="hQT-fN-IcH"/>
+                            <constraint firstItem="fzC-A0-LKH" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="jRf-SA-j4b"/>
                             <constraint firstItem="Vpb-59-s9P" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="40" id="pwm-3h-xuL"/>
                             <constraint firstItem="Vpb-59-s9P" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="v12-0I-FRR"/>
                         </constraints>
@@ -43,6 +56,7 @@
                     <navigationItem key="navigationItem" id="RqH-O7-Y2l"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="ItemTV" destination="fzC-A0-LKH" id="0yD-DC-e6E"/>
                         <outlet property="customNavigationBar" destination="Vpb-59-s9P" id="JLK-kN-byU"/>
                     </connections>
                 </viewController>

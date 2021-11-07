@@ -22,6 +22,11 @@
 		EB606A652737A76700A3C22C /* MyAroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606A642737A76700A3C22C /* MyAroundVC.swift */; };
 		EB606A672737A77300A3C22C /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606A662737A77300A3C22C /* ChatVC.swift */; };
 		EB606A692737A77E00A3C22C /* MyCarrotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606A682737A77E00A3C22C /* MyCarrotVC.swift */; };
+		EB606A702737B53800A3C22C /* ItemTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606A6E2737B53800A3C22C /* ItemTVC.swift */; };
+		EB606A712737B53800A3C22C /* ItemTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB606A6F2737B53800A3C22C /* ItemTVC.xib */; };
+		EB606A732737C2E100A3C22C /* itemTVDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606A722737C2E100A3C22C /* itemTVDataModel.swift */; };
+		EB606A752737E47F00A3C22C /* HomeItemSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB606A742737E47F00A3C22C /* HomeItemSB.storyboard */; };
+		EB606A792737E4BE00A3C22C /* HomeItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606A782737E4BE00A3C22C /* HomeItemVC.swift */; };
 		EB6C40AF2732163D009DE2F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6C40AE2732163D009DE2F2 /* AppDelegate.swift */; };
 		EB6C40B12732163D009DE2F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6C40B02732163D009DE2F2 /* SceneDelegate.swift */; };
 		EB6C40B827321642009DE2F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB6C40B727321642009DE2F2 /* Assets.xcassets */; };
@@ -44,6 +49,11 @@
 		EB606A642737A76700A3C22C /* MyAroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAroundVC.swift; sourceTree = "<group>"; };
 		EB606A662737A77300A3C22C /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		EB606A682737A77E00A3C22C /* MyCarrotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarrotVC.swift; sourceTree = "<group>"; };
+		EB606A6E2737B53800A3C22C /* ItemTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTVC.swift; sourceTree = "<group>"; };
+		EB606A6F2737B53800A3C22C /* ItemTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTVC.xib; sourceTree = "<group>"; };
+		EB606A722737C2E100A3C22C /* itemTVDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemTVDataModel.swift; sourceTree = "<group>"; };
+		EB606A742737E47F00A3C22C /* HomeItemSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeItemSB.storyboard; sourceTree = "<group>"; };
+		EB606A782737E4BE00A3C22C /* HomeItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemVC.swift; sourceTree = "<group>"; };
 		EB6C40AB2732163D009DE2F2 /* CarrotMarket_CloneCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrotMarket_CloneCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6C40AE2732163D009DE2F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB6C40B02732163D009DE2F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,8 +129,9 @@
 				EB6C40B927321642009DE2F2 /* LaunchScreen.storyboard */,
 				EBAFF91D27378DE20091CC7A /* Main.storyboard */,
 				EB606A4C273792AE00A3C22C /* HomeSB.storyboard */,
-				EB606A542737931400A3C22C /* TownSB.storyboard */,
+				EB606A742737E47F00A3C22C /* HomeItemSB.storyboard */,
 				EB606A50273792EA00A3C22C /* MyAroundSB.storyboard */,
+				EB606A542737931400A3C22C /* TownSB.storyboard */,
 				EB606A4E273792BD00A3C22C /* ChatSB.storyboard */,
 				EB606A52273792FF00A3C22C /* MyCarrotSB.storyboard */,
 			);
@@ -153,6 +164,7 @@
 				EB606A592737A04500A3C22C /* CustomNavgationBar.swift */,
 				EB606A5B2737A07300A3C22C /* CustomNavigationBar.xib */,
 				EB606A5727379EFB00A3C22C /* HomeVC.swift */,
+				EB606A782737E4BE00A3C22C /* HomeItemVC.swift */,
 				EB606A622737A75B00A3C22C /* TownVC.swift */,
 				EB606A642737A76700A3C22C /* MyAroundVC.swift */,
 				EB606A662737A77300A3C22C /* ChatVC.swift */,
@@ -164,6 +176,8 @@
 		EB6C40C727322595009DE2F2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EB606A6E2737B53800A3C22C /* ItemTVC.swift */,
+				EB606A6F2737B53800A3C22C /* ItemTVC.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -178,6 +192,7 @@
 		EB6C40C9273225AF009DE2F2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EB606A722737C2E100A3C22C /* itemTVDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,9 +263,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB6C40BB27321642009DE2F2 /* LaunchScreen.storyboard in Resources */,
+				EB606A752737E47F00A3C22C /* HomeItemSB.storyboard in Resources */,
 				EB606A53273792FF00A3C22C /* MyCarrotSB.storyboard in Resources */,
 				EB606A51273792EA00A3C22C /* MyAroundSB.storyboard in Resources */,
 				EB606A5C2737A07300A3C22C /* CustomNavigationBar.xib in Resources */,
+				EB606A712737B53800A3C22C /* ItemTVC.xib in Resources */,
 				EB606A5627379A5A00A3C22C /* Main.storyboard in Resources */,
 				EB606A4D273792AE00A3C22C /* HomeSB.storyboard in Resources */,
 				EB606A552737931400A3C22C /* TownSB.storyboard in Resources */,
@@ -271,7 +288,10 @@
 				EBAFF91C27378A0D0091CC7A /* TabBarController.swift in Sources */,
 				EB606A632737A75B00A3C22C /* TownVC.swift in Sources */,
 				EB606A5827379EFB00A3C22C /* HomeVC.swift in Sources */,
+				EB606A732737C2E100A3C22C /* itemTVDataModel.swift in Sources */,
 				EB606A652737A76700A3C22C /* MyAroundVC.swift in Sources */,
+				EB606A792737E4BE00A3C22C /* HomeItemVC.swift in Sources */,
+				EB606A702737B53800A3C22C /* ItemTVC.swift in Sources */,
 				EB606A5A2737A04500A3C22C /* CustomNavgationBar.swift in Sources */,
 				EB6C40AF2732163D009DE2F2 /* AppDelegate.swift in Sources */,
 				EB606A5E2737A57700A3C22C /* UIViewController + Extension.swift in Sources */,

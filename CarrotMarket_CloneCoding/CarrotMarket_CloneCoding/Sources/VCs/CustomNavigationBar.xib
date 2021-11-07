@@ -30,14 +30,14 @@
                     <buttonConfiguration key="configuration" style="plain" image="menuIcon" title=""/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1j-7N-UdQ">
-                    <rect key="frame" x="5" y="8" width="89" height="34"/>
+                    <rect key="frame" x="5" y="8" width="89" height="35.5"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="locationIcon" imagePlacement="trailing">
                         <attributedString key="attributedTitle">
                             <fragment content="상일동">
                                 <attributes>
-                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
-                                    <font key="NSFont" size="18" name=".AppleSDGothicNeoI-Regular"/>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" metaFont="system" size="18"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
