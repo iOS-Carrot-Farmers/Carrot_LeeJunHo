@@ -16,6 +16,10 @@ class TabBarController: UITabBarController {
         setTabBar()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    
     //MARK: - Basic Setup
     
     func setTabBar() {
@@ -35,7 +39,7 @@ class TabBarController: UITabBarController {
         let myCarrotNVC = myCarrotSB.instantiateViewController(identifier: "MyCarrotNVC")
         
         self.tabBar.backgroundColor = .white
-        self.tabBar.barTintColor = .black
+        UITabBar.appearance().tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         self.tabBar.isTranslucent = false
       
         //MARK: - tabBarItem data

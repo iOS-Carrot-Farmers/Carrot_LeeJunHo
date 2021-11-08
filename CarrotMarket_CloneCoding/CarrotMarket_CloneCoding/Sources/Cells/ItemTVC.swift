@@ -22,12 +22,12 @@ class ItemTVC: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        itemImage.layer.cornerRadius = 10
     }
     
     func setData(appData: ItemTVData) {
         itemLabel.text = appData.item
-        locationLabel.text = appData.location + appData.time
+        locationLabel.text = appData.location + " ・ " + appData.time
         priceLabel.text = appData.price
         itemImage.image = appData.makeImage()
     }

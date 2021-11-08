@@ -15,28 +15,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AuS-al-s35">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AuS-al-s35">
                         <rect key="frame" x="14" y="19" width="105" height="105"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="AuS-al-s35" secondAttribute="height" multiplier="1:1" id="WEJ-bc-E14"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jw-Rg-jar">
-                        <rect key="frame" x="145" y="27" width="150" height="17"/>
+                        <rect key="frame" x="145" y="21" width="150" height="19.333333333333329"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="txX-5P-cXZ"/>
                         </constraints>
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
-                                    <font key="NSFont" size="14" name="SFProDisplay-Regular"/>
+                                    <font key="NSFont" size="16" name="SFProDisplay-Regular"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHH-Jy-SRW">
-                        <rect key="frame" x="145" y="49" width="150" height="14"/>
+                        <rect key="frame" x="145" y="45.333333333333336" width="150" height="15.666666666666664"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="0MC-RT-lBQ"/>
                         </constraints>
@@ -44,14 +44,14 @@
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" red="0.5725490196078431" green="0.58823529411764708" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="11" name="SFProDisplay-Regular"/>
+                                    <font key="NSFont" size="13" name="SFProDisplay-Regular"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekW-o5-ecn">
-                        <rect key="frame" x="145" y="71" width="150" height="18"/>
+                        <rect key="frame" x="145" y="69" width="150" height="18"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="fpq-ck-ztY"/>
                         </constraints>
@@ -67,7 +67,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="qHH-Jy-SRW" firstAttribute="leading" secondItem="6jw-Rg-jar" secondAttribute="leading" id="Bmt-Yd-MsW"/>
-                    <constraint firstItem="6jw-Rg-jar" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="CwT-rs-Hti"/>
+                    <constraint firstItem="6jw-Rg-jar" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="CwT-rs-Hti"/>
                     <constraint firstItem="AuS-al-s35" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="FLd-yH-hup"/>
                     <constraint firstAttribute="bottom" secondItem="AuS-al-s35" secondAttribute="bottom" constant="19" id="GHr-vW-Zwt"/>
                     <constraint firstItem="6jw-Rg-jar" firstAttribute="leading" secondItem="AuS-al-s35" secondAttribute="trailing" constant="26" id="PeW-z9-Yzq"/>

@@ -12,3 +12,9 @@ extension UIViewController: CustomViewDelegate {
         print("3")
     }
 }
+
+extension UIViewController: CustomBottomBarDelegate {
+    func touchUpToGoChat() {
+        print("3")
+    }
+}

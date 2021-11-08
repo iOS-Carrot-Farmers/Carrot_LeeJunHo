@@ -12,6 +12,18 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var itemImageSV: UIScrollView!
     @IBOutlet weak var itemPageControl: UIPageControl!
     
+    @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var viewsLabel: UILabel!
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    
+    
+    @IBOutlet weak var customBottomBar: CustomBottomBar!
+    
     var itemIndex : Int = 0
     var itemTVContentList : [ItemTVData] = []
     
@@ -19,20 +31,37 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addContentScrollView()
         itemImageSV.delegate = self
+        customBottomBar.delegate = self
+        addContentScrollView()
         setPageControl()
-
+        setData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         SetNavigationBar()
+        itemPageControl.frame = CGRect(x: 50, y: 345,width: itemPageControl.bounds.width, height: itemPageControl.bounds.height)
+        itemPageControl.center = CGPoint(x: self.view.frame.size.width/2, y:355)
     }
+    
     
     func SetNavigationBar() {
         navigationController?.setNavigationBarHidden(false, animated:true)
+        self.view.bringSubviewToFront(customBottomBar)
+        customBottomBar.priceLabel.text = itemTVContentList[itemIndex].price
     }
+    
+    func setData() {
+        itemLabel.text = itemTVContentList[itemIndex].item
+        categoryLabel.text = itemTVContentList[itemIndex].category + " ・ " + itemTVContentList[itemIndex].time
+        contentLabel.text = itemTVContentList[itemIndex].content
+        viewsLabel.text = "조회 " + String(itemTVContentList[itemIndex].views)
+        usernameLabel.text = "킹받아요"
+        locationLabel.text = itemTVContentList[itemIndex].location
+    }
+    
+    //스크롤뷰, 페이지컨트롤 부분
     
     func makeImage(imageName : String) -> UIImage? {
         return UIImage(named: imageName)
