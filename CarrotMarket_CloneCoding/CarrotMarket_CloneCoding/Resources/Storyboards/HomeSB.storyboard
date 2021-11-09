@@ -11,7 +11,7 @@
         <!--HomeVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" wantsFullScreenLayout="YES" id="Y6W-OH-hqX" customClass="HomeVC" customModule="CarrotMarket_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="HomeVC" customModule="CarrotMarket_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,10 +72,9 @@
         <!--HomeNVC-->
         <scene sceneID="xNy-bg-hiH">
             <objects>
-                <navigationController storyboardIdentifier="HomeNVC" automaticallyAdjustsScrollViewInsets="NO" id="FXF-t8-98c" customClass="HomeNVC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNVC" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" navigationBarHidden="YES" id="FXF-t8-98c" customClass="HomeNVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7D3-cm-WCC">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

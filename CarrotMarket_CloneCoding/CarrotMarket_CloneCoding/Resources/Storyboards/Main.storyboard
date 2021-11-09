@@ -9,7 +9,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="H8q-e0-unx">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="ka4-kf-Qi7" customClass="TabBarController" customModule="CarrotMarket_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="ka4-kf-Qi7" customClass="TabBarController" customModule="CarrotMarket_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TyA-Lu-nBm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

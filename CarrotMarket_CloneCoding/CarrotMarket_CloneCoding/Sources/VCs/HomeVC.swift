@@ -25,8 +25,8 @@ class HomeVC: UIViewController {
         ItemTV.delegate = self
         ItemTV.dataSource = self
         SetNavigationBar()
+        tabBarController?.tabBar.isHidden = false
     }
-    
     
     func registerXib(){
         let xibTableViewName = UINib(nibName: ItemTVC.identifier, bundle: nil)
@@ -73,9 +73,6 @@ extension HomeVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        
-        
         
         let homeItemSB = UIStoryboard.init(name: "HomeItemSB", bundle:nil)
         
