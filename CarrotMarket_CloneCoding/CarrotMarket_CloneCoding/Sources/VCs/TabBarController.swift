@@ -16,10 +16,6 @@ class TabBarController: UITabBarController {
         setTabBar()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
-    
     //MARK: - Basic Setup
     
     func setTabBar() {
@@ -52,12 +48,11 @@ class TabBarController: UITabBarController {
         
         setViewControllers([homeNVC, townNVC, myAroundNVC, chatNVC, myCarrotNVC], animated: true)
     }
+    
 }
 
-extension UITabBar {
-    override open func sizeThatFits(_ size: CGSize) -> CGSize {
-        var sizeThatFits = super.sizeThatFits(size)
-        sizeThatFits.height = 50
-        return sizeThatFits
+extension TabBarController: UITabBarControllerDelegate {
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        tabBarController?.tabBar.isHidden = false
     }
 }

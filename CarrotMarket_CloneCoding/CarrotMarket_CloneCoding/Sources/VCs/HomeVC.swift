@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, UITabBarControllerDelegate {
 
     @IBOutlet weak var customNavigationBar: CustomNavigationBar!
 
@@ -26,6 +26,9 @@ class HomeVC: UIViewController {
         ItemTV.dataSource = self
         SetNavigationBar()
         tabBarController?.tabBar.isHidden = false
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     func registerXib(){
@@ -51,6 +54,7 @@ class HomeVC: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated:true)
         self.view.bringSubviewToFront(plusButton)
     }
+    
 }
 
 extension HomeVC: UITableViewDelegate {

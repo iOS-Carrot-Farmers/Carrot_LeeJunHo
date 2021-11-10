@@ -50,6 +50,7 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
         navigationController?.setNavigationBarHidden(false, animated:true)
         self.view.bringSubviewToFront(customBottomBar)
         customBottomBar.priceLabel.text = itemTVContentList[itemIndex].price
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     func setData() {
