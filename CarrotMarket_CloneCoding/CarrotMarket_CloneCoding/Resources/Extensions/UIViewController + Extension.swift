@@ -18,3 +18,9 @@ extension UIViewController: CustomBottomBarDelegate {
         print("3")
     }
 }
+
+extension UIViewController: CustomTopBarDelegate {
+    func touchUpToGoBack() {
+        self.navigationController?.popViewController(animated: false)
+    }
+}

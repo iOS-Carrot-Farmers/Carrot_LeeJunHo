@@ -23,6 +23,9 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
     
     
     @IBOutlet weak var customBottomBar: CustomBottomBar!
+    @IBOutlet weak var customTopBar: CustomTopBar!
+    
+    @IBOutlet weak var bigSV: UIScrollView!
     
     var itemIndex : Int = 0
     var itemTVContentList : [ItemTVData] = []
@@ -33,6 +36,8 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         itemImageSV.delegate = self
         customBottomBar.delegate = self
+        customTopBar.delegate = self
+        bigSV.delegate = self
         addContentScrollView()
         setPageControl()
         setData()
@@ -43,14 +48,15 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
         SetNavigationBar()
         itemPageControl.frame = CGRect(x: 50, y: 345,width: itemPageControl.bounds.width, height: itemPageControl.bounds.height)
         itemPageControl.center = CGPoint(x: self.view.frame.size.width/2, y:355)
+        
     }
     
-    
     func SetNavigationBar() {
-        navigationController?.setNavigationBarHidden(false, animated:true)
+        navigationController?.setNavigationBarHidden(true, animated:true)
         self.view.bringSubviewToFront(customBottomBar)
         customBottomBar.priceLabel.text = itemTVContentList[itemIndex].price
         self.tabBarController?.tabBar.isHidden = true
+        self.view.bringSubviewToFront(customTopBar)
     }
     
     func setData() {
@@ -89,5 +95,23 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let value = itemImageSV.contentOffset.x/itemImageSV.frame.size.width
         setPageControlSelectedPage(currentPage: Int(round(value)))
+        
+        if bigSV.panGestureRecognizer.velocity(in: bigSV).y < 0 {
+            UIView.animate(withDuration: 1, animations: {
+                if self.customTopBar.alpha < 1 {
+                    self.customTopBar.alpha += 0.02
+                }
+            }, completion: nil)
+        } else if bigSV.panGestureRecognizer.velocity(in: bigSV).y > 0 {
+            UIView.animate(withDuration: 1, animations: {
+                if self.customTopBar.alpha > 0  {
+                    self.customTopBar.alpha -= 0.02
+                }
+            }, completion: nil)
+        } else {
+            print("stay")
+        }
     }
 }
+
+
