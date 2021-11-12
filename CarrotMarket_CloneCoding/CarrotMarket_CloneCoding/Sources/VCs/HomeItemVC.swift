@@ -77,8 +77,8 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
     private func addContentScrollView() {
         for i in 0..<itemTVContentList[itemIndex].imageName.count {
             let imageView = UIImageView()
-            let xPos = self.view.frame.width * CGFloat(i)
-            imageView.frame = CGRect(x: xPos, y: 0, width: itemImageSV.bounds.width, height: itemImageSV.bounds.height)
+            let xPos = (self.view.frame.width) * CGFloat(i)
+            imageView.frame = CGRect(x: xPos, y: 0, width: self.view.frame.width, height: itemImageSV.bounds.height)
             imageView.image = makeImage(imageName: itemTVContentList[itemIndex].imageName[i])
             itemImageSV.addSubview(imageView)
             itemImageSV.contentSize.width = imageView.frame.width * CGFloat(i + 1)
