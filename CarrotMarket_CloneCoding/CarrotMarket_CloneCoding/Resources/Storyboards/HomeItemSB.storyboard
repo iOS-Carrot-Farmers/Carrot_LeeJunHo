@@ -226,7 +226,7 @@
                                             <constraint firstAttribute="bottom" secondItem="Y2H-ee-RfX" secondAttribute="bottom" id="p9D-R6-PKm"/>
                                         </constraints>
                                     </view>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="no4-4I-tiW">
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="no4-4I-tiW">
                                         <rect key="frame" x="156" y="405" width="155" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="pageIndicatorTintColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
