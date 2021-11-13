@@ -11,13 +11,13 @@
         <!--HomeVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" wantsFullScreenLayout="YES" id="Y6W-OH-hqX" customClass="HomeVC" customModule="CarrotMarket_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" wantsFullScreenLayout="YES" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="Y6W-OH-hqX" customClass="HomeVC" customModule="CarrotMarket_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9c-3V-pyH">
-                                <rect key="frame" x="258" y="653" width="87" height="75"/>
+                                <rect key="frame" x="278" y="653" width="87" height="75"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plusButton"/>
                             </button>
@@ -48,7 +48,7 @@
                         <constraints>
                             <constraint firstItem="YEa-iS-4vb" firstAttribute="trailing" secondItem="fzC-A0-LKH" secondAttribute="trailing" id="IWs-R7-cQo"/>
                             <constraint firstItem="YEa-iS-4vb" firstAttribute="trailing" secondItem="Vpb-59-s9P" secondAttribute="trailing" id="Omd-tZ-uFr"/>
-                            <constraint firstItem="YEa-iS-4vb" firstAttribute="trailing" secondItem="k9c-3V-pyH" secondAttribute="trailing" constant="30" id="QkC-fB-Bnx"/>
+                            <constraint firstAttribute="trailing" secondItem="k9c-3V-pyH" secondAttribute="trailing" constant="10" id="QkC-fB-Bnx"/>
                             <constraint firstItem="YEa-iS-4vb" firstAttribute="bottom" secondItem="k9c-3V-pyH" secondAttribute="bottom" constant="50" id="TxK-Ch-tE6"/>
                             <constraint firstItem="fzC-A0-LKH" firstAttribute="top" secondItem="Vpb-59-s9P" secondAttribute="bottom" id="YKo-sO-LVJ"/>
                             <constraint firstAttribute="bottom" secondItem="fzC-A0-LKH" secondAttribute="bottom" constant="80" id="hQT-fN-IcH"/>
@@ -67,28 +67,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.79999999999995" y="138.17733990147784"/>
+            <point key="canvasLocation" x="1887.2" y="138.17733990147784"/>
         </scene>
         <!--HomeNVC-->
-        <scene sceneID="xNy-bg-hiH">
+        <scene sceneID="cno-ud-Mxl">
             <objects>
-                <navigationController storyboardIdentifier="HomeNVC" automaticallyAdjustsScrollViewInsets="NO" id="FXF-t8-98c" customClass="HomeNVC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="5DC-UQ-8XY" customClass="HomeNVC" customModule="CarrotMarket_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7D3-cm-WCC">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zDZ-pl-c2j">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4iC-cV-F2z">
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xRV-4E-ihR">
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="acy-BN-hKI"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="gn3-Ua-UN3"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fDW-zX-QFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Me9-4Z-W0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="138.61607142857142"/>
+            <point key="canvasLocation" x="944.79999999999995" y="138.17733990147784"/>
         </scene>
     </scenes>
     <resources>

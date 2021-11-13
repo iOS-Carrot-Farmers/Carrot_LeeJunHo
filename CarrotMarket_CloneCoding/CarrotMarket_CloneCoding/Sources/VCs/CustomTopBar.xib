@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTopBar" customModule="CarrotMarket_CloneCoding" customModuleProvider="target">
+            <connections>
+                <outlet property="alphaV" destination="4Iq-vE-Miv" id="xQ1-qw-ejn"/>
+                <outlet property="motherView" destination="iN0-l3-epB" id="u7a-qz-o1X"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Iq-vE-Miv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="704-Pm-NOd">
+                    <rect key="frame" x="6" y="3.5" width="43.5" height="43.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="704-Pm-NOd" secondAttribute="height" multiplier="1:1" id="YLx-04-5yj"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system">
+                        <attributedString key="attributedTitle"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="l69-pm-5OV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e91-ey-1nu">
+                    <rect key="frame" x="327" y="-2" width="54" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="e91-ey-1nu" secondAttribute="height" multiplier="1:1" id="ZVA-pR-rta"/>
+                    </constraints>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="menuIcon">
+                        <attributedString key="attributedTitle"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kq9-D2-PJ3">
+                    <rect key="frame" x="297.5" y="3" width="42.5" height="42.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Kq9-D2-PJ3" secondAttribute="height" multiplier="1:1" id="rF5-Xu-wxk"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system">
+                        <attributedString key="attributedTitle"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5f-V9-kNG">
+                    <rect key="frame" x="34.5" y="-3" width="56" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="H5f-V9-kNG" secondAttribute="height" multiplier="1:1" id="60E-pW-7T0"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="homeIcon">
+                        <attributedString key="attributedTitle"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="H5f-V9-kNG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8cj-HV-eCG"/>
+                <constraint firstItem="Kq9-D2-PJ3" firstAttribute="width" secondItem="Kq9-D2-PJ3" secondAttribute="height" multiplier="1:1" id="9bY-Fz-UbE"/>
+                <constraint firstAttribute="trailing" secondItem="e91-ey-1nu" secondAttribute="trailing" constant="-6" id="9yP-0u-S41"/>
+                <constraint firstItem="704-Pm-NOd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6" id="IX9-Nv-2A0"/>
+                <constraint firstItem="704-Pm-NOd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="KrL-IP-33V"/>
+                <constraint firstItem="e91-ey-1nu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="TKK-ZA-svh"/>
+                <constraint firstAttribute="trailing" secondItem="4Iq-vE-Miv" secondAttribute="trailing" id="dT6-Gy-Dzr"/>
+                <constraint firstAttribute="bottom" secondItem="4Iq-vE-Miv" secondAttribute="bottom" id="eP3-cA-jOz"/>
+                <constraint firstItem="Kq9-D2-PJ3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-1" id="esS-EN-gNu"/>
+                <constraint firstItem="e91-ey-1nu" firstAttribute="leading" secondItem="Kq9-D2-PJ3" secondAttribute="trailing" constant="-13" id="hwS-ao-iYQ"/>
+                <constraint firstItem="H5f-V9-kNG" firstAttribute="leading" secondItem="704-Pm-NOd" secondAttribute="trailing" constant="-15" id="nba-Kg-bzT"/>
+                <constraint firstItem="4Iq-vE-Miv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qPl-Eb-mds"/>
+                <constraint firstItem="4Iq-vE-Miv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sw0-ss-wRv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="homeIcon" width="32" height="32"/>
+        <image name="menuIcon" width="30" height="30"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

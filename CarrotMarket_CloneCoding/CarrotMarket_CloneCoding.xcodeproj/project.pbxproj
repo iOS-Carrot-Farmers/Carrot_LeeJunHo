@@ -29,6 +29,9 @@
 		EB606A792737E4BE00A3C22C /* HomeItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606A782737E4BE00A3C22C /* HomeItemVC.swift */; };
 		EB606A7D273908BF00A3C22C /* CustomBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606A7C273908BF00A3C22C /* CustomBottomBar.swift */; };
 		EB606A7F273908CC00A3C22C /* CustomBottomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB606A7E273908CC00A3C22C /* CustomBottomBar.xib */; };
+		EB606A83273B9B3A00A3C22C /* HomeNVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606A82273B9B3A00A3C22C /* HomeNVC.swift */; };
+		EB606A87273BAFAA00A3C22C /* CustomTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606A86273BAFAA00A3C22C /* CustomTopBar.swift */; };
+		EB606A89273BAFBB00A3C22C /* CustomTopBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB606A88273BAFBB00A3C22C /* CustomTopBar.xib */; };
 		EB6C40AF2732163D009DE2F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6C40AE2732163D009DE2F2 /* AppDelegate.swift */; };
 		EB6C40B12732163D009DE2F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6C40B02732163D009DE2F2 /* SceneDelegate.swift */; };
 		EB6C40B827321642009DE2F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB6C40B727321642009DE2F2 /* Assets.xcassets */; };
@@ -58,6 +61,9 @@
 		EB606A782737E4BE00A3C22C /* HomeItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemVC.swift; sourceTree = "<group>"; };
 		EB606A7C273908BF00A3C22C /* CustomBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomBar.swift; sourceTree = "<group>"; };
 		EB606A7E273908CC00A3C22C /* CustomBottomBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBottomBar.xib; sourceTree = "<group>"; };
+		EB606A82273B9B3A00A3C22C /* HomeNVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNVC.swift; sourceTree = "<group>"; };
+		EB606A86273BAFAA00A3C22C /* CustomTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTopBar.swift; sourceTree = "<group>"; };
+		EB606A88273BAFBB00A3C22C /* CustomTopBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTopBar.xib; sourceTree = "<group>"; };
 		EB6C40AB2732163D009DE2F2 /* CarrotMarket_CloneCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrotMarket_CloneCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6C40AE2732163D009DE2F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB6C40B02732163D009DE2F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +175,9 @@
 				EB606A5B2737A07300A3C22C /* CustomNavigationBar.xib */,
 				EB606A7C273908BF00A3C22C /* CustomBottomBar.swift */,
 				EB606A7E273908CC00A3C22C /* CustomBottomBar.xib */,
+				EB606A86273BAFAA00A3C22C /* CustomTopBar.swift */,
+				EB606A88273BAFBB00A3C22C /* CustomTopBar.xib */,
+				EB606A82273B9B3A00A3C22C /* HomeNVC.swift */,
 				EB606A5727379EFB00A3C22C /* HomeVC.swift */,
 				EB606A782737E4BE00A3C22C /* HomeItemVC.swift */,
 				EB606A622737A75B00A3C22C /* TownVC.swift */,
@@ -274,6 +283,7 @@
 				EB606A51273792EA00A3C22C /* MyAroundSB.storyboard in Resources */,
 				EB606A5C2737A07300A3C22C /* CustomNavigationBar.xib in Resources */,
 				EB606A712737B53800A3C22C /* ItemTVC.xib in Resources */,
+				EB606A89273BAFBB00A3C22C /* CustomTopBar.xib in Resources */,
 				EB606A7F273908CC00A3C22C /* CustomBottomBar.xib in Resources */,
 				EB606A5627379A5A00A3C22C /* Main.storyboard in Resources */,
 				EB606A4D273792AE00A3C22C /* HomeSB.storyboard in Resources */,
@@ -291,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB606A87273BAFAA00A3C22C /* CustomTopBar.swift in Sources */,
 				EB606A672737A77300A3C22C /* ChatVC.swift in Sources */,
 				EB606A7D273908BF00A3C22C /* CustomBottomBar.swift in Sources */,
 				EBAFF91C27378A0D0091CC7A /* TabBarController.swift in Sources */,
@@ -304,6 +315,7 @@
 				EB6C40AF2732163D009DE2F2 /* AppDelegate.swift in Sources */,
 				EB606A5E2737A57700A3C22C /* UIViewController + Extension.swift in Sources */,
 				EB6C40B12732163D009DE2F2 /* SceneDelegate.swift in Sources */,
+				EB606A83273B9B3A00A3C22C /* HomeNVC.swift in Sources */,
 				EB606A692737A77E00A3C22C /* MyCarrotVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

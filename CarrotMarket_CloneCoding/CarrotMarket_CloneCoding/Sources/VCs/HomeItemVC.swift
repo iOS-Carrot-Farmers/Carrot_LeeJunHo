@@ -23,6 +23,9 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
     
     
     @IBOutlet weak var customBottomBar: CustomBottomBar!
+    @IBOutlet weak var customTopBar: CustomTopBar!
+    
+    @IBOutlet weak var bigSV: UIScrollView!
     
     var itemIndex : Int = 0
     var itemTVContentList : [ItemTVData] = []
@@ -33,6 +36,8 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         itemImageSV.delegate = self
         customBottomBar.delegate = self
+        customTopBar.delegate = self
+        bigSV.delegate = self
         addContentScrollView()
         setPageControl()
         setData()
@@ -43,13 +48,19 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
         SetNavigationBar()
         itemPageControl.frame = CGRect(x: 50, y: 345,width: itemPageControl.bounds.width, height: itemPageControl.bounds.height)
         itemPageControl.center = CGPoint(x: self.view.frame.size.width/2, y:355)
+        
     }
     
-    
     func SetNavigationBar() {
-        navigationController?.setNavigationBarHidden(false, animated:true)
+        navigationController?.setNavigationBarHidden(true, animated:true)
         self.view.bringSubviewToFront(customBottomBar)
         customBottomBar.priceLabel.text = itemTVContentList[itemIndex].price
+        self.tabBarController?.tabBar.isHidden = true
+        self.view.bringSubviewToFront(customTopBar)
+        self.customTopBar.alphaV.alpha = 0.01
+        self.customTopBar.motherView.backgroundColor = UIColor.clear
+        self.customTopBar.backgroundColor = UIColor.clear
+        self.bigSV.contentInsetAdjustmentBehavior = .never
     }
     
     func setData() {
@@ -70,8 +81,8 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
     private func addContentScrollView() {
         for i in 0..<itemTVContentList[itemIndex].imageName.count {
             let imageView = UIImageView()
-            let xPos = self.view.frame.width * CGFloat(i)
-            imageView.frame = CGRect(x: xPos, y: 0, width: itemImageSV.bounds.width, height: itemImageSV.bounds.height)
+            let xPos = (self.view.frame.width) * CGFloat(i)
+            imageView.frame = CGRect(x: xPos, y: 0, width: self.view.frame.width, height: itemImageSV.bounds.height)
             imageView.image = makeImage(imageName: itemTVContentList[itemIndex].imageName[i])
             itemImageSV.addSubview(imageView)
             itemImageSV.contentSize.width = imageView.frame.width * CGFloat(i + 1)
@@ -88,5 +99,29 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let value = itemImageSV.contentOffset.x/itemImageSV.frame.size.width
         setPageControlSelectedPage(currentPage: Int(round(value)))
+        
+        if bigSV.panGestureRecognizer.velocity(in: bigSV).y < 0 {
+            UIView.animate(withDuration: 0.01, animations: {
+                self.customTopBar.alphaV.alpha = self.bigSV.contentOffset.y*0.004
+                for i in 1...50 {
+                    let time = i * 50
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(time)) {
+                        self.customTopBar.alphaV.alpha = self.bigSV.contentOffset.y*0.004
+                    }
+                }
+            }, completion: nil)
+        } else if bigSV.panGestureRecognizer.velocity(in: bigSV).y > 0 {
+            UIView.animate(withDuration: 0.01, animations: {
+                self.customTopBar.alphaV.alpha = self.bigSV.contentOffset.y*0.004
+                for i in 1...50 {
+                    let time = i * 50
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(time)) {
+                        self.customTopBar.alphaV.alpha = self.bigSV.contentOffset.y*0.004
+                    }
+                }
+            }, completion: nil)
+        } else {
+            print("stay")
+        }
     }
 }

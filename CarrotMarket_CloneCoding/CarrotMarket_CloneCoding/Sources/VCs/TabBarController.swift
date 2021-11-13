@@ -16,10 +16,6 @@ class TabBarController: UITabBarController {
         setTabBar()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
-    
     //MARK: - Basic Setup
     
     func setTabBar() {
@@ -51,5 +47,12 @@ class TabBarController: UITabBarController {
         myCarrotNVC.tabBarItem = UITabBarItem(title : "나의 당근", image: UIImage(named: "myCarrotIcon"), selectedImage: UIImage(named: "myCarrotIconFill"))
         
         setViewControllers([homeNVC, townNVC, myAroundNVC, chatNVC, myCarrotNVC], animated: true)
+    }
+    
+}
+
+extension TabBarController: UITabBarControllerDelegate {
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        tabBarController?.tabBar.isHidden = false
     }
 }

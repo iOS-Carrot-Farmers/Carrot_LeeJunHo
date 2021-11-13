@@ -19,6 +19,10 @@ class TownVC: UIViewController {
         SetNavigationBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     func SetNavigationBar() {
         navigationController?.setNavigationBarHidden(true, animated:true)
     }
