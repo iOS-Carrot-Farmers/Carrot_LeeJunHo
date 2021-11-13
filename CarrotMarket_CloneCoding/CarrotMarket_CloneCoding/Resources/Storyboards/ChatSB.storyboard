@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChatVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ChatVC" id="Y6W-OH-hqX" customClass="ChatVC" customModule="CarrotMarket_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xoE-OU-5IJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dzb-nz-5SP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TW4-dX-OUg" customClass="CustomNavigationBar" customModule="CarrotMarket_CloneCoding" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="40" width="414" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="PGJ-kF-Usm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TW4-dX-OUg" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="CNw-vH-6Dt"/>
+                            <constraint firstItem="TW4-dX-OUg" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="40" id="FuO-SJ-sFj"/>
+                            <constraint firstAttribute="trailing" secondItem="TW4-dX-OUg" secondAttribute="trailing" id="tbo-p3-HrW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hee-r9-RGZ"/>
+                    <connections>
+                        <outlet property="customNavigationBar" destination="TW4-dX-OUg" id="6Iw-bK-R4U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="138.61607142857142"/>
+        </scene>
+        <!--ChatNVC-->
+        <scene sceneID="h7k-qQ-0fo">
+            <objects>
+                <navigationController storyboardIdentifier="ChatNVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ncT-hF-SGt" customClass="ChatNVC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T36-aj-psm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="MFl-wi-eRX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5t-H5-f96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
