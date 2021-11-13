@@ -9,7 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTopBar" customModule="CarrotMarket_CloneCoding" customModuleProvider="target">
             <connections>
-                <outlet property="backButton" destination="704-Pm-NOd" id="Y3E-PJ-ibG"/>
+                <outlet property="alphaV" destination="4Iq-vE-Miv" id="xQ1-qw-ejn"/>
+                <outlet property="motherView" destination="iN0-l3-epB" id="u7a-qz-o1X"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -17,6 +18,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Iq-vE-Miv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="704-Pm-NOd">
                     <rect key="frame" x="6" y="3.5" width="43.5" height="43.5"/>
                     <constraints>
@@ -36,6 +41,7 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="e91-ey-1nu" secondAttribute="height" multiplier="1:1" id="ZVA-pR-rta"/>
                     </constraints>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="menuIcon">
                         <attributedString key="attributedTitle"/>
@@ -71,9 +77,13 @@
                 <constraint firstItem="704-Pm-NOd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6" id="IX9-Nv-2A0"/>
                 <constraint firstItem="704-Pm-NOd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="KrL-IP-33V"/>
                 <constraint firstItem="e91-ey-1nu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="TKK-ZA-svh"/>
+                <constraint firstAttribute="trailing" secondItem="4Iq-vE-Miv" secondAttribute="trailing" id="dT6-Gy-Dzr"/>
+                <constraint firstAttribute="bottom" secondItem="4Iq-vE-Miv" secondAttribute="bottom" id="eP3-cA-jOz"/>
                 <constraint firstItem="Kq9-D2-PJ3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-1" id="esS-EN-gNu"/>
                 <constraint firstItem="e91-ey-1nu" firstAttribute="leading" secondItem="Kq9-D2-PJ3" secondAttribute="trailing" constant="-13" id="hwS-ao-iYQ"/>
                 <constraint firstItem="H5f-V9-kNG" firstAttribute="leading" secondItem="704-Pm-NOd" secondAttribute="trailing" constant="-15" id="nba-Kg-bzT"/>
+                <constraint firstItem="4Iq-vE-Miv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qPl-Eb-mds"/>
+                <constraint firstItem="4Iq-vE-Miv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sw0-ss-wRv"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="139" y="154"/>

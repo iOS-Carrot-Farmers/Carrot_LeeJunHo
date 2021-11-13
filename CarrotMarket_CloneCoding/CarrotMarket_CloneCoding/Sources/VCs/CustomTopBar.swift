@@ -11,9 +11,8 @@ class CustomTopBar: UIView {
     
     public var delegate: CustomTopBarDelegate?
     
-    @IBOutlet weak var priceLabel: UILabel!
-    
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet var motherView: UIView!
+    @IBOutlet weak var alphaV: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

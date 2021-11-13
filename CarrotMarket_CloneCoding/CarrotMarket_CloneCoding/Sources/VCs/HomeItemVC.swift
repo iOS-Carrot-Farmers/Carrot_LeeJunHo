@@ -57,7 +57,10 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
         customBottomBar.priceLabel.text = itemTVContentList[itemIndex].price
         self.tabBarController?.tabBar.isHidden = true
         self.view.bringSubviewToFront(customTopBar)
-        self.customTopBar.alpha = 0.01
+        self.customTopBar.alphaV.alpha = 0.01
+        self.customTopBar.motherView.backgroundColor = UIColor.clear
+        self.customTopBar.backgroundColor = UIColor.clear
+        self.bigSV.contentInsetAdjustmentBehavior = .never
     }
     
     func setData() {
@@ -93,31 +96,27 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
         itemPageControl.currentPage = currentPage
     }
     
-    @objc func scrollViewAnimation() {
-        self.customTopBar.alpha = self.bigSV.contentOffset.y*0.008
-    }
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let value = itemImageSV.contentOffset.x/itemImageSV.frame.size.width
         setPageControlSelectedPage(currentPage: Int(round(value)))
         
         if bigSV.panGestureRecognizer.velocity(in: bigSV).y < 0 {
             UIView.animate(withDuration: 0.01, animations: {
-                self.customTopBar.alpha = self.bigSV.contentOffset.y*0.008
+                self.customTopBar.alphaV.alpha = self.bigSV.contentOffset.y*0.004
                 for i in 1...50 {
                     let time = i * 50
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(time)) {
-                        self.customTopBar.alpha = self.bigSV.contentOffset.y*0.008
+                        self.customTopBar.alphaV.alpha = self.bigSV.contentOffset.y*0.004
                     }
                 }
             }, completion: nil)
         } else if bigSV.panGestureRecognizer.velocity(in: bigSV).y > 0 {
             UIView.animate(withDuration: 0.01, animations: {
-                self.customTopBar.alpha = self.bigSV.contentOffset.y*0.008
+                self.customTopBar.alphaV.alpha = self.bigSV.contentOffset.y*0.004
                 for i in 1...50 {
                     let time = i * 50
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .milliseconds(time)) {
-                        self.customTopBar.alpha = self.bigSV.contentOffset.y*0.008
+                        self.customTopBar.alphaV.alpha = self.bigSV.contentOffset.y*0.004
                     }
                 }
             }, completion: nil)
@@ -125,5 +124,4 @@ class HomeItemVC: UIViewController, UIScrollViewDelegate {
             print("stay")
         }
     }
-    
 }
